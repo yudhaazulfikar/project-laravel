@@ -33,3 +33,13 @@ Route::get('/', function () {
     Route::get("/tescontroller", "TesController@show");
 //Resource
     Route::resource('siswa', "SiswaController");
+
+//Baru
+    Route::get('/', function(){
+        return view('home');
+    });   
+    
+//About
+    Route::get('/about', function(){
+    return view('about');
+    });    

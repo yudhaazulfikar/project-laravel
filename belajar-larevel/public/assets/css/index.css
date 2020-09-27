@@ -1,0 +1,76 @@
+body {
+	background: #CCC;
+}
+
+.Header a:hover {
+	color: #FFF;
+}
+.bg-image {
+	background: url(../img/wakanda.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	min-height: 500px;
+	
+}
+
+.about{
+	margin-top: -200px;
+}
+
+.About fa{
+	color: #FFF;
+}
+
+.about span{
+	padding: 10px 20px 10px 20px;
+}
+/
+<div class="container">
+				<div class="row">
+					<div class="col">
+						<h1 style="text-align: center;">About Me</h1>
+						<p class="lead text-justify" style="background-color: white;"> Nama saya Yudha Zulfikar Ardianto, biasa dipanggil Yudha. Umur saya 16 tahun. Rumah saya berada di jalan Gadel Timur IV no 1. Saya bersekolah di SMK Negeri 1 Surabaya. kegiatan saya sehari hari hanya bersekolah</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+				<div class="row">
+					<div class="col">
+
+		<thead class="thead-black">
+			<tr>
+				<th colspan="3" style="text-align: center; font-size: 50px">Contact</th>
+			</tr>
+		</thead>
+					</div>
+				</div>	
+			</div>
+		</body>	
+
+
+
+
+
+		 </div>
+             <div class="col-mda-6">
+           <p style="background-color: white;" >
+              Nama saya Yudha Zulfikar Ardianto, biasa dipanggil Yudha. Umur saya 16 tahun. Rumah saya berada di jalan Gadel Timur IV no 1. Saya bersekolah di SMK Negeri 1 Surabaya. Saya memiliki satu adik, dia sekolah di tingkat sd.
+           </p>
+          </div>
+          <div class="col-lg-6" style="background-color: white;">
+            <p>
+            	Keseharian saya sehari-hari hanya bersekolah. Saya bersekolah di smk adalah supaya dapat berkerja setelah lulus sekolah
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          </section>
+       <!-- akhir about -->
+       <div class="row" style="background: black; color: white;">
+       		<div class="col-md-12 ">
+       			<p style="text-align: center;">©Yudhaza</p>
+       		</div>
+       </div>	/**/
+		/*
