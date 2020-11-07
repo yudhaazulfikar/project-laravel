@@ -40,6 +40,10 @@ Route::get('/', function () {
     });   
     
 //About
-    Route::get('/about', function(){
+Route::get('/about', function(){
     return view('about');
-    });    
+});  
+    
+  Route::get('/data', 'siswacontroller@create');
+
+  Route::post('/data', 'siswacontroller@store');
