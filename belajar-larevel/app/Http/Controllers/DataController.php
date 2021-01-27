@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\siswa;
 
-class siswacontroller extends Controller
+class MainController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class siswacontroller extends Controller
     public function index()
     {
         //menampilkan data
-        $datasiswa = siswa::all();
-        return view('master.tampildata', compact('datasiswa'));
+        return view('tampildata');
+        
     }
 
     /**

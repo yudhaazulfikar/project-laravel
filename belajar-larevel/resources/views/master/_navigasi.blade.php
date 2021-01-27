@@ -12,10 +12,16 @@
     <a class="navbar-brand" href="#">XII RPL II</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/data">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tampildata">View data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/editdata">Edit Data</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
