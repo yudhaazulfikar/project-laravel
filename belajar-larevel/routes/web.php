@@ -36,26 +36,11 @@ Route::get('/', function () {
 
 //Baru
     Route::get('/', function(){
-        return view('home');
+        return view('data');
     });   
     
 //About
 Route::get('/about', function(){
     return view('about');
 });  
-    
-  Route::get('/data', 'siswacontroller@create');
 
-  Route::post('/data', 'siswacontroller@store');
-
-  Route::get('/siswa', 'siswacontroller@index');
-
-  Route::get('/datasiswa','siswacontroller@index');
-
-  Route::get('/ViewData','siswacontroller@index');
-
-Route::get('/tampildata', 'siswacontroller@index');
-
-//Route::post('/tampildata', 'siswacontroller@index');
-
-Route::resource('main', 'siswacontroller');

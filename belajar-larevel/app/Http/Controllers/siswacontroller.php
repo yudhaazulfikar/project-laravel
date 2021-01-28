@@ -38,14 +38,17 @@ class siswacontroller extends Controller
      */
     public function store(Request $request)
     {
+       /* $this->validate($request,[
+           'name' => 'required',
+            'telepon' => 'required',
+            'alamat' => 'required'
+        ]);*/
         siswa::create([
             'name' => $request->nama,
             'telepon' => $request->telepon,
             'alamat' => $request->alamat,
         ]);
-
-
-        return redirect()->back();
+        return redirect(route('main.editdata'))->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -56,7 +59,8 @@ class siswacontroller extends Controller
      */
     public function show($id)
     {
-        return view('tampildata');
+        //return view('tampildata');
+        redirect(route('siswa.index'));
     }
 
     /**
@@ -67,7 +71,8 @@ class siswacontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $datasiswa = siswa::find($id);
+        return view('master.editdata', compact('datasiswa'));
     }
 
     /**
@@ -79,8 +84,21 @@ class siswacontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $upd = siswa::find($id);
+
+        /*$this->validate($request, [
+            'name' => 'required',
+            'telepon' => 'required',
+            'alamat' => 'required'          
+        ]);*/
+        $upd->update([
+            'name' => $request->nama,
+            'telepon' => $request->telepon,
+            'alamat' => $request->alamat,
+        ]);
+        return redirect(route('siswa.index'));
     }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -90,6 +108,8 @@ class siswacontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $siswa = siswa::find($id);
+        $siswa->delete();
+        return redirect(route('siswa.index'));
     }
 }

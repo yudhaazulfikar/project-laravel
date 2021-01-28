@@ -3,7 +3,7 @@
 
 @section('content');
 
-    <div class="container">
+     <div class="container">
         <table class="table">
             <thead class="thead-dark">
             <tr>
@@ -15,20 +15,19 @@
             </thead>
             <tbody>
             @php
-              $i = 1;
-            
+                $i = 1;
             @endphp
             @foreach ($datasiswa as $siswa)
-            <tr>
-            
+            <tr>  
             <th>{{$siswa->name}}</th>
             <th>{{$siswa->telepon}}</th>
             <th>{{$siswa->alamat}}</th>
             <th>
             <div class="btn-group">
-              <button type="button" class="btn btn-success">Edit</button>
-              <button type="button" class="btn btn-danger">Delete</button>
-            </div></th>
+              <a href="{{ route('siswa.edit', $siswa->id) }}" type="button" class="btn btn-success">Edit</a>
+              <a href="{{ route('siswa.destroy', $siswa->id) }}" class="btn btn-danger" onclick="return confirm('Yakin Hapus data Ini?')">Delete</a>
+            </div>
+            </th>
             </tr>
               
             @endforeach
