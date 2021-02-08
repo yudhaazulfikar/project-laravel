@@ -38,14 +38,21 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
+        /*$this->validate($request,[
+            'name' => 'required',
+             'telepon' => 'required',
+             'alamat' => 'required'
+        ]);
         siswa::create([
             'name' => $request->nama,
             'telepon' => $request->telepon,
             'alamat' => $request->alamat,
+
         ]);
+        $siswa->save();
 
 
-        return redirect()->back();
+        return redirect()->back();*/
     }
 
     /**
