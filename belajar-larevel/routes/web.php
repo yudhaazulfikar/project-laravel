@@ -31,16 +31,30 @@ Route::get('/', function () {
     });
 //Cotroller
     Route::get("/tescontroller", "TesController@show");
-//Resource
-    Route::resource('siswa', "SiswaController");
 
-//Baru
-    Route::get('/', function(){
-        return view('data');
-    });   
-    
 //About
 Route::get('/about', function(){
     return view('about');
 });  
 
+//home
+Route::get('/home', function(){
+   return view('home');
+})->name('home');  
+
+//login
+Route::get('/login', 'AuthController@login')->name('login');
+Route::post('/login', 'AuthController@postlogin')->name('postlogin');
+
+//logout
+Route::get('/logout', 'AuthController@logout')->name('logout');
+
+//Autentikasi
+Route::group(['middleware'=> 'auth'], function(){
+    //Resource
+    Route::resource('siswa', "SiswaController");
+    //Baru
+    Route::get('/inputdata', function(){
+        return view('data');
+    })->name('data');   
+});

@@ -12,13 +12,22 @@
     <a class="navbar-brand" href="#">XII RPL II</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/about">About</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/inputdata">Input data</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="/siswa">View data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('login') }}">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('logout') }}">logout</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

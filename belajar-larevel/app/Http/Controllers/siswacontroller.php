@@ -46,19 +46,18 @@ class siswacontroller extends Controller
     {
      $request->validate([
         'name' => 'required|min:5|max:50',
-        'telepon' => 'required|min:11|max:12',
-        'alamat' => 'required|max:30',
-        'body' => 'required',
+        
     ]);
 
     // The blog post is valid...
-    }
+    
 
         siswa::create([
             'name' => $request->name,
             'telepon' => $request->telepon,
             'alamat' => $request->alamat,
         ]);
+     }
         return redirect(route('siswa.index'));
       /*  $siswa=new siswa();
         $siswa->id=$request->get('id');
@@ -124,7 +123,7 @@ class siswacontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(siswa $datasiswa)
+    public function destroy($id)
     {
         $siswa = siswa::find($id);
         $siswa->delete();
